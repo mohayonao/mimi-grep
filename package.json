@@ -9,6 +9,10 @@
   "bugs": {
     "url": "https://github.com/mohayonao/mimi-grep/issues"
   },
+  "dependencies": {
+    "optionator": "^0.8.1",
+    "web-audio-engine": "^0.8.3"
+  },
   "devDependencies": {
     "eater": "^1.5.4",
     "eslint": "^2.9.0",
@@ -30,6 +34,9 @@
   ],
   "license": "MIT",
   "main": "lib/cli.js",
+  "optionalDependencies": {
+    "speaker": "^0.3.0"
+  },
   "preferGlobal": true,
   "repository": {
     "type": "git",
