@@ -1,7 +1,7 @@
 {
   "name": "mimi-grep",
   "description": "auralization grep command",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Nao Yonamine <mohayonao@gmail.com>",
   "bin": {
     "mimi-grep": "./bin/mimi-grep.js"
