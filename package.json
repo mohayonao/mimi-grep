@@ -3,8 +3,21 @@
   "description": "auralization grep command",
   "version": "0.0.0",
   "author": "Nao Yonamine <mohayonao@gmail.com>",
+  "bin": {
+    "mimi-grep": "./bin/mimi-grep.js"
+  },
   "bugs": {
     "url": "https://github.com/mohayonao/mimi-grep/issues"
+  },
+  "dependencies": {
+    "optionator": "^0.8.1",
+    "web-audio-engine": "^0.8.3",
+    "web-audio-scheduler": "^1.1.0"
+  },
+  "devDependencies": {
+    "eater": "^1.5.4",
+    "eslint": "^2.9.0",
+    "eslint-plugin-node": "^1.1.0"
   },
   "engines": {
     "node": ">= 4.0.0"
@@ -22,8 +35,21 @@
   ],
   "license": "MIT",
   "main": "lib/cli.js",
+  "optionalDependencies": {
+    "speaker": "^0.3.0"
+  },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/mohayonao/mimi-grep.git"
+  },
+  "scripts": {
+    "clean": "rm -rf npm-debug.log",
+    "lint": "eslint lib test",
+    "postversion": "git push && git push --tags && npm run clean",
+    "prepublish": "npm run clean && npm run lint && npm run test",
+    "preversion": "npm run clean && npm run lint && npm run test",
+    "test": "eater",
+    "travis": "npm run lint && npm run test"
   }
 }
