@@ -9,6 +9,11 @@
   "bugs": {
     "url": "https://github.com/mohayonao/mimi-grep/issues"
   },
+  "devDependencies": {
+    "eater": "^1.5.4",
+    "eslint": "^2.9.0",
+    "eslint-plugin-node": "^1.1.0"
+  },
   "engines": {
     "node": ">= 4.0.0"
   },
@@ -29,5 +34,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/mohayonao/mimi-grep.git"
+  },
+  "scripts": {
+    "clean": "rm -rf npm-debug.log",
+    "lint": "eslint lib test",
+    "postversion": "git push && git push --tags && npm run clean",
+    "prepublish": "npm run clean && npm run lint && npm run test",
+    "preversion": "npm run clean && npm run lint && npm run test",
+    "test": "eater",
+    "travis": "npm run lint && npm run test"
   }
 }
