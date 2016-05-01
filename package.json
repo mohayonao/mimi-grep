@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "optionator": "^0.8.1",
-    "web-audio-engine": "^0.8.3"
+    "web-audio-engine": "^0.8.3",
+    "web-audio-scheduler": "^1.1.0"
   },
   "devDependencies": {
     "eater": "^1.5.4",
