@@ -31,7 +31,7 @@ $ mimi-grep --stdout <filename> | play -t s16 -c 2 -r 44100 -
 
 use ALSA aplay command (for linux user)
 ```
-$ mimi-grap --stdout <filename> | aplay -f cd
+$ mimi-grep --stdout <filename> | aplay -f cd
 ```
 
 ## TODO
