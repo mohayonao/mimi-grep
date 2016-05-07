@@ -45,11 +45,10 @@
   },
   "scripts": {
     "clean": "rm -rf npm-debug.log",
-    "lint": "eslint lib test",
+    "lint": "eslint lib",
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run lint && npm run test",
     "preversion": "npm run clean && npm run lint && npm run test",
-    "test": "eater",
-    "travis": "npm run lint && npm run test"
+    "travis": "npm run lint"
   }
 }
