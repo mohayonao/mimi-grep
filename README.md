@@ -22,6 +22,12 @@ $ mimi-grep -c drone <filename>
 $ mimi-grep -c drum <filename>
 ```
 
+#### using pipe for input
+
+```
+$ cat <filename> | mimi-grep
+```
+
 #### without node-speaker
 
 use SoX play command (for mac user)
@@ -35,10 +41,7 @@ $ mimi-grep --stdout <filename> | aplay -f cd
 ```
 
 ## TODO
-
 - plugin composer
-- plugin parser
-- stdin support
 
 ## License
 MIT
